@@ -9,19 +9,19 @@
             <div class="col-12 col-md-4">
                 <label>
                     Name: 
-                    <input type="text">
+                    <input type="text" name="animeName">
                 </label>
             </div>
             <div class="col-12 col-md-4">
                 <label>
                     Description: 
-                    <textarea name="" id="" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+                    <textarea name="animeDesc" id="" oninput="autoHeight()"></textarea>
                 </label>
             </div>
             <div class="col-12 col-md-4">
                 <label>
                     Airing?: 
-                    <input type="checkbox">
+                    <input name="isAiring" type="checkbox">
                 </label>
             </div>
         </div>
@@ -30,13 +30,13 @@
             <div class="col-12 col-md-4">
                 <label>
                     Start Date: 
-                    <input type="date" name="" id="">
+                    <input name="startDate" type="date" name="" id="">
                 </label>
             </div>
             <div class="col-12 col-md-4">
                 <label>
                     End Date: 
-                    <input type="date" name="" id="">
+                    <input name="endDate" type="date" name="" id="">
                 </label>
             </div>
         </div>
@@ -45,7 +45,7 @@
             <div class="col-12 col-md-4">
                 <label>
                     Genre: 
-                    <select name="" id="">
+                    <select name="animeCat" id="">
                         <option value="">Something</option>
                     </select>
                 </label>
@@ -53,7 +53,7 @@
             <div class="col-12 col-md-4">
                 <label>
                     Studio:
-                    <select name="" id="">
+                    <select name="animeStu" id="">
                         <option value="">Something else</option>
                     </select>
                 </label>
@@ -63,7 +63,7 @@
             <div class="col-12">
                 <label>
                     Image name:
-                    <input type="text" name="" id="">
+                    <input type="text" name="image" id="">
                 </label>
             </div>
             <div class="col-12">
