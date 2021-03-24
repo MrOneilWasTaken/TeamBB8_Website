@@ -4,6 +4,7 @@
         <div class="row">
             <h1>Add New Anime</h1>
         </div>
+
         <div class="row">
             <div class="col-12 col-md-4">
                 <label>
@@ -23,19 +24,25 @@
                     <input type="checkbox">
                 </label>
             </div>
-            <div class="col-12">
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-4">
                 <label>
                     Start Date: 
                     <input type="date" name="" id="">
                 </label>
             </div>
-            <div class="col-12">
+            <div class="col-12 col-md-4">
                 <label>
                     End Date: 
                     <input type="date" name="" id="">
                 </label>
             </div>
-            <div class="col-12">
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-4">
                 <label>
                     Genre: 
                     <select name="" id="">
@@ -43,7 +50,7 @@
                     </select>
                 </label>
             </div>
-            <div class="col-12">
+            <div class="col-12 col-md-4">
                 <label>
                     Studio:
                     <select name="" id="">
@@ -51,17 +58,18 @@
                     </select>
                 </label>
             </div>
+        </div>
+        <div class="row">
             <div class="col-12">
-            <label>
-                Image name:
-                <input type="text" name="" id="">
-            </label>
+                <label>
+                    Image name:
+                    <input type="text" name="" id="">
+                </label>
             </div>
             <div class="col-12">
                 <input type="submit" value="Add Anime">
             </div>
         </div>
-        
     </form>
 </div>
 
