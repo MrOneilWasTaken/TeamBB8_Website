@@ -1,6 +1,16 @@
 <?php require_once('header.php'); ?>
+
+<?php 
+$genre = "SELECT * FROM category";
+$prepGenre = $dbConn->prepare($genre);
+$prepGenre->execute();
+
+$studio = "SELECT * FROM studio";
+$prepStudio = $dbConn->prepare($studio);
+$prepStudio->execute();
+?>
 <div class="container">
-    <form id="newShowForm" action="add-anime-process.php" method="post">
+    <form id="newShowForm" action="addShowProcess.php" method="post">
         <div class="row text-center">
             <div class="col-12">    
                 <h1>Add New Show</h1>
@@ -32,13 +42,19 @@
             <div class="col-12 col-md-6">
                 <label>Genre:</label>
                 <select class="full-width" name="showCat" id="" required>
-                    <option value="">Something</option>
+                    <option value="" disabled selected>Select Genre</option>
+                    <?php while($genreRow = $prepGenre->fetchObject()) { ?>
+                    <option value="<?php echo "$genreRow->catID"; ?>"><?php echo "$genreRow->catDesc"; ?></option>
+                    <?php } ?>
                 </select>
             </div>
             <div class="col-12 col-md-6">
                 <label>Studio:</label>
                 <select class="full-width" name="showStu" id="" required>
-                    <option value="">Something else</option>
+                <option value="" disabled selected>Select Studio</option>
+                    <?php while($studioRow = $prepStudio->fetchObject()) { ?>
+                    <option value="<?php echo "$studioRow->stuID"; ?>"><?php echo "$studioRow->stuName"; ?></option>
+                    <?php } ?>
                 </select>
             </div>
         </div>
@@ -48,6 +64,10 @@
                 <input class="full-width" type="text" name="image" id="" required>
             </div>
             <div class="col-12 col-md-6">
+                <label>Number of Episodes:</label>
+                <input class="full-width"  type="number" name="showEp" id="">
+            </div>
+            <div class="col-12 col-md-1">
                 <label>Airing?:</label><br/>
                 <input name="isAiring" id="checkboxAiring" type="checkbox">
             </div>
@@ -56,6 +76,8 @@
             </div>
         </div>
     </form>
+
+    
 </div>
 
 <?php require_once('footer.php'); ?>

@@ -9,4 +9,7 @@
     <title>Localhost construction</title>
 </head>
 <body>
-    
+    <?php 
+        require_once('functions.php');
+        $dbConn = getConnection(); 
+    ?>
