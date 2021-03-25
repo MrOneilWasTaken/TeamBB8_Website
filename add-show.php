@@ -1,27 +1,27 @@
 <?php require_once('header.php'); ?>
 <div class="container">
-    <form action="add-anime-process.php" method="post">
+    <form id="newShowForm" action="add-anime-process.php" method="post">
         <div class="row">
-            <h1>Add New Anime</h1>
+            <h1>Add New Show</h1>
         </div>
 
         <div class="row">
             <div class="col-12 col-md-4">
                 <label>
                     Name: 
-                    <input type="text" name="animeName">
+                    <input type="text" class="full-width" name="showName" required>
                 </label>
             </div>
             <div class="col-12 col-md-4">
                 <label>
                     Description: 
-                    <textarea name="animeDesc" id="" oninput="autoHeight()"></textarea>
+                    <textarea class="full-width" name="showDesc" id="" oninput="autoHeight()" required></textarea>
                 </label>
             </div>
             <div class="col-12 col-md-4">
                 <label>
                     Airing?: 
-                    <input name="isAiring" type="checkbox">
+                    <input name="isAiring" id="checkboxAiring" type="checkbox">
                 </label>
             </div>
         </div>
@@ -30,13 +30,13 @@
             <div class="col-12 col-md-4">
                 <label>
                     Start Date: 
-                    <input name="startDate" type="date" name="" id="">
+                    <input class="full-width" name="startDate" type="date" name="" id="" required>
                 </label>
             </div>
-            <div class="col-12 col-md-4">
-                <label>
+            <div  class="col-12 col-md-4">
+                <label id="endDateCont">
                     End Date: 
-                    <input name="endDate" type="date" name="" id="">
+                    <input class="full-width" name="endDate" type="date" name="" id="endDate" required>
                 </label>
             </div>
         </div>
@@ -45,7 +45,7 @@
             <div class="col-12 col-md-4">
                 <label>
                     Genre: 
-                    <select name="animeCat" id="">
+                    <select class="full-width" name="showCat" id="" required>
                         <option value="">Something</option>
                     </select>
                 </label>
@@ -53,7 +53,7 @@
             <div class="col-12 col-md-4">
                 <label>
                     Studio:
-                    <select name="animeStu" id="">
+                    <select class="full-width" name="showStu" id="" required>
                         <option value="">Something else</option>
                     </select>
                 </label>
@@ -63,7 +63,7 @@
             <div class="col-12">
                 <label>
                     Image name:
-                    <input type="text" name="image" id="">
+                    <input class="full-width" type="text" name="image" id="" required>
                 </label>
             </div>
             <div class="col-12">

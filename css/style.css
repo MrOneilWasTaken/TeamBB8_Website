@@ -5,3 +5,7 @@
 textarea {
     vertical-align: top;
 }
+
+.full-width {
+    width: 100%;
+}
