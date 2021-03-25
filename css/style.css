@@ -9,3 +9,16 @@ textarea {
 .full-width {
     width: 100%;
 }
+
+form div {
+    padding-top:20px; 
+}
+
+input[type=text], input[type=date], select {
+    padding: 5px 10px;
+}
+
+input[type=checkbox] {
+    height: 30px;
+    width: 30px;
+}
