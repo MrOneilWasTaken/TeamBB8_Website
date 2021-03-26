@@ -49,7 +49,7 @@ if($errors)
 } else {
     echo updateShow($input);
     echo "<br>Update Successful<br>";
-    echo "<a class='btn bg-dark text-white' href='add-show.php'>Add New Show<a>";
+    echo "<a class='btn bg-dark text-white' href='chooseShow.php'>Add New Show<a>";
 }
 
 ?>

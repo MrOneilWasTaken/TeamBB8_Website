@@ -10,7 +10,7 @@ $prepStudio = $dbConn->prepare($studio);
 $prepStudio->execute();
 ?>
 <div class="container">
-    <form id="newShowForm" action="addShowProcess.php" method="post">
+    <form id="showForm" action="addShowProcess.php" method="post">
         <div class="row text-center">
             <div class="col-12">    
                 <h1>Add New Show</h1>

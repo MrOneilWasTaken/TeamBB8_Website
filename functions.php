@@ -67,6 +67,8 @@ function validateShow() {
 
     $input['showImage']  = filter_has_var(INPUT_POST, 'showImage') ? $_POST['showImage'] : null;
 
+    $input['showID']   = filter_has_var(INPUT_POST, 'showID') ? $_POST['showID'] : null;
+
     //empty not needed, required attribute on form
 
     if(!in_array($input['showCat'], $catArr)) {

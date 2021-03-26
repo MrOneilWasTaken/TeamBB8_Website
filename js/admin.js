@@ -1,5 +1,5 @@
 //variables
-const newForm = document.getElementById('newShowForm');
+const form = document.getElementById('showForm');
 const endDate = document.getElementById('endDate');
 const box = document.getElementById('endDateCont');
 
@@ -7,8 +7,8 @@ function autoHeight() {
     this.style.height = "";this.style.height = this.scrollHeight + "px"
 }
 
-newForm.checkboxAiring.onclick = function() {
-    if(newForm.checkboxAiring.checked) {
+form.checkboxAiring.onclick = function() {
+    if(form.checkboxAiring.checked) {
         endDate.required = false;
         box.style.visibility = 'hidden'; 
     } else {
