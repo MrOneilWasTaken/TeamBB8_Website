@@ -2,19 +2,27 @@
 require_once('header.php');
 require_once('functions.php');
 
-function processShow(array $input) {
+function updateShow(array $input) {
 
     try
     {
         $dbConn = getConnection();
 
-        $newShow = "INSERT INTO shows
-        (showName, showDesc, showEp, startDate, endDate, showCat, showStu, showImage, isAiring)
-        VALUES (:showName, :showDesc, :showEp, :startDate, :endDate, :showCat, :showStu, :showImage, :isAiring)";
+        $updateShow = "UPDATE shows SET
+        showName     = :showName, 
+        showDesc     = :showDesc, 
+        showEp       = :showEp, 
+        startDate    = :startDate, 
+        endDate      = :endDate, 
+        showCat      = :showCat, 
+        showStu      = :showStu, 
+        showImage    = :showImage, 
+        isAiring     = :isAiring
+        WHERE showID = :showID";
 
-        $prepareNewShow = $dbConn->prepare($newShow);
+        $prepareUpdate = $dbConn->prepare($updateShow);
 
-        $prepareNewShow->execute(array(
+        $prepareUpdate->execute(array(
             ':showName'  => $input['showName'],
             ':showDesc'  => $input['showDesc'],
             ':showEp'    => $input['showEp'],
@@ -23,7 +31,8 @@ function processShow(array $input) {
             ':showCat'   => $input['showCat'],
             ':showStu'   => $input['showStu'],
             ':showImage' => $input['showImage'],
-            ':isAiring'  => $input['isAiring']
+            ':isAiring'  => $input['isAiring'],
+            ':showID'    => $input['showID']
         ));
     }
     catch(Exception $e)
@@ -38,8 +47,8 @@ if($errors)
 {
     echo showErrors($errors);
 } else {
-    echo processShow($input);
-    echo "Update Successful<br>";
+    echo updateShow($input);
+    echo "<br>Update Successful<br>";
     echo "<a class='btn bg-dark text-white' href='add-show.php'>Add New Show<a>";
 }
 

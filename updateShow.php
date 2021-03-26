@@ -17,9 +17,9 @@ $prepareShow->execute(array(':showID' => $showID));
 
 ?>
 
-<?php while($singleShow = $prepareShow->fetchObject()) { ?>
 <div class="container">
     <form id="newShowForm" action="updateShowProcess.php" method="post">
+        <?php while($singleShow = $prepareShow->fetchObject()) { ?>
         <div class="row text-center">
             <div class="col-12">    
                 <h1>Update Show</h1>
@@ -90,10 +90,10 @@ $prepareShow->execute(array(':showID' => $showID));
                 <input type="submit" value="Update Show">
             </div>
         </div>
+        <?php } ?>
     </form>
 
     
 </div>
-<?php } ?>
 
 <?php require_once('footer.php'); ?>
