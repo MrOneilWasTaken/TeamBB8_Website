@@ -61,7 +61,7 @@ $prepStudio->execute();
         <div class="row">
             <div class="col-12 col-md-6">
                 <label>Image name:</label>
-                <input class="full-width" type="text" name="image" id="" required>
+                <input class="full-width" type="text" name="showImage" id="" required>
             </div>
             <div class="col-12 col-md-6">
                 <label>Number of Episodes:</label>
