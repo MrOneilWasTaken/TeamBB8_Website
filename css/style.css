@@ -22,3 +22,12 @@ input[type=checkbox] {
     height: 30px;
     width: 30px;
 }
+
+a, a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+a[role=button] {
+    color: #fff !important;
+}

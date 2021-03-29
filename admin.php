@@ -16,7 +16,8 @@
 
         $prepShow->execute();
 ?>
-        
+
+    
     <div class="row py-4 text-center">
         <div class="col-12 col-md-4 border border-dark py-4 mx-4 rounded">            
             <a href="addShow.php">
@@ -67,7 +68,7 @@
                     </a>
                 </div>
                 <div class="col-3 align-self-center">
-                    <a href="#" onclick="" data-toggle="tooltip" data-placement="top" title="Delete Show">
+                    <a href="#" data-toggle="modal" data-target="#exampleModal" data-placement="top" title="Delete Show">
                         <img src="img/delete.svg" class="full-width" alt="delete">
                     </a>
                 </div>
@@ -77,4 +78,25 @@
     </div>
 
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Delete Show</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            Are you sure you want to delete this show?
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            <a role="button" href="deleteShow.php?showID=<?php echo $showRow->showID; ?>" class="btn btn-primary">Delete</a>
+        </div>
+        </div>
+    </div>
+    </div>
 <?php } require_once('footer.php'); ?>
