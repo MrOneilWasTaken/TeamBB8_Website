@@ -5,7 +5,7 @@
 
         $deleteShow = "DELETE FROM shows WHERE showID = :showID";
         $prepDelete = $dbConn->prepare($deleteShow);
-        $prepDelete->execute(array(':showID = $showID'));
+        $prepDelete->execute(array(':showID' => $showID));
 
     } catch (\Throwable $th) {
         //throw $th;

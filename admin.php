@@ -16,7 +16,6 @@
 
         $prepShow->execute();
 ?>
-
     
     <div class="row py-4 text-center">
         <div class="col-12 col-md-4 border border-dark py-4 mx-4 rounded">            
@@ -35,68 +34,47 @@
         </div>
         <?php while($showRow = $prepShow->fetchObject()) { ?>
         <div class="col-12 col-md-4 border border-dark py-4 mx-4 rounded">
-            <div class="row">
-                <div class="col-6 offset-3">
-                    <img class="img-fluid" src="img/<?php echo $showRow->showImage; ?>" alt="<?php echo $showRow->showName; ?>">
+            <form action="deleteShow.php?showID=<?php echo $showRow->showID; ?>" method="post" onsubmit="return confirm('Are you sure you want to delete this show?');">
+                <div class="row">
+                    <div class="col-6 offset-3">
+                        <img class="img-fluid" src="img/<?php echo $showRow->showImage; ?>" alt="<?php echo $showRow->showName; ?>">
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-6 offset-3 text-center">
-                    <?php echo $showRow->showName; ?>
+                <div class="row">
+                    <div class="col-6 offset-3 text-center">
+                        <?php echo $showRow->showName; ?>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-4 offset-4 text-center">
-                    <?php echo $showRow->catDesc; ?>
+                <div class="row">
+                    <div class="col-4 offset-4 text-center">
+                        <?php echo $showRow->catDesc; ?>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-6 offset-3 text-center">
-                    <?php echo $showRow->stuName; ?>
+                <div class="row">
+                    <div class="col-6 offset-3 text-center">
+                        <?php echo $showRow->stuName; ?>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-12 text-center">
-                    <?php $showRow->endDate == null ? $value = "Present" : $value = $showRow->endDate; ?>
-                    <?php echo $showRow->startDate; ?> - <?php echo $value; ?>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <?php $showRow->endDate == '0000-00-00' ? $value = "Present" : $value = $showRow->endDate; ?>
+                        <?php echo $showRow->startDate; ?> - <?php echo $value; ?>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-3 offset-3 text-center">
-                    <a href="updateShow.php?showID=<?php echo $showRow->showID; ?>" data-toggle="tooltip" data-placement="top" title="Edit Show">
-                        <img src="img/pencil.svg" class="full-width" alt="edit">
-                    </a>
+                <div class="row">
+                    <div class="col-3 offset-3 text-center">
+                        <a href="updateShow.php?showID=<?php echo $showRow->showID; ?>" data-toggle="tooltip" data-placement="top" title="Edit Show">
+                            <img src="img/pencil.svg" class="full-width" alt="edit">
+                        </a>
+                    </div>
+                    <div class="col-3 align-self-center">
+                    <input type="submit" class="deleteButton" value="">
+                    </div>
                 </div>
-                <div class="col-3 align-self-center">
-                    <a href="#" data-toggle="modal" data-target="#exampleModal" data-placement="top" title="Delete Show">
-                        <img src="img/delete.svg" class="full-width" alt="delete">
-                    </a>
-                </div>
-            </div>
+            </form>
         </div>
         
     </div>
 
 </div>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Delete Show</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body">
-            Are you sure you want to delete this show?
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-            <a role="button" href="deleteShow.php?showID=<?php echo $showRow->showID; ?>" class="btn btn-primary">Delete</a>
-        </div>
-        </div>
-    </div>
-    </div>
 <?php } require_once('footer.php'); ?>

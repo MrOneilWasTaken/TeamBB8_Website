@@ -10,7 +10,7 @@ textarea {
     width: 100%;
 }
 
-form div {
+#editShow div, #showForm div {
     padding-top:20px; 
 }
 
@@ -30,4 +30,15 @@ a, a:hover {
 
 a[role=button] {
     color: #fff !important;
+}
+
+.deleteButton {
+    background-color: transparent;
+    background-image: url("../img/delete.svg");
+    background-repeat: no-repeat;
+    background-position: fixed center;
+    background-size: 64.5px 64.5px;
+    border: none;
+    width: 100px;
+    height: 100px;
 }
