@@ -86,4 +86,14 @@ function validateShow() {
     return array ($input, $errors);
 }
 
+function setSession($k, $v) {
+    $_SESSION[$k] = $v;
+    return true;
+}
+
+function getSession($k) {
+    if(isset($_SESSION[$k]) {
+        return $_SESSION[$k];
+    }
+}
 ?>
