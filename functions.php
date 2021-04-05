@@ -92,7 +92,7 @@ function setSession($k, $v) {
 }
 
 function getSession($k) {
-    if(isset($_SESSION[$k]) {
+    if(isset($_SESSION[$k])) {
         return $_SESSION[$k];
     }
 }
