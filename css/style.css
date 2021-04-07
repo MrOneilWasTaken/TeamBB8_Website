@@ -32,7 +32,7 @@ a[role=button] {
     color: #fff !important;
 }
 
-.deleteButton {
+.deleteButton, .deleteButton:active {
     background-color: transparent;
     background-image: url("../img/delete.svg");
     background-repeat: no-repeat;

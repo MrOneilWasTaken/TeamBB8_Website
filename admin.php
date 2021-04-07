@@ -1,9 +1,20 @@
 <?php require_once('header.php'); ?>
 
 <div class="container">
-    <div class="row text-center py-4">
-        <div class="col-12">
-            <h1>Please Choose a Show:</h1>
+    <?php getSession('permaClose') ? $visibility = 'hidden' : $visibility = 'visible';  ?>
+    <div class="row" style="visibility:<?php echo $visibility; ?>;">
+        <div class="alert alert-success col-12 my-3" role="alert">
+            <div class="row">
+                <div class="col-11">    
+                    <h3>Login successful:</h3>
+                    Welcome, Admin
+                </div>
+                <div class="col align-self-center">
+                    <button type="button" onclick="setSession('permaClose', 'true')" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
     <?php 
@@ -16,7 +27,11 @@
 
         $prepShow->execute();
 ?>
-    
+    <div class="row text-center py-4">
+        <div class="col-12">
+            <h1>Please Choose a Show:</h1>
+        </div>
+    </div>
     <div class="row py-4 text-center">
         <div class="col-12 col-md-4 border border-dark py-4 mx-4 rounded">            
             <a href="addShow.php">
