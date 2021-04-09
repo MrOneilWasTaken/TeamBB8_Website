@@ -1,4 +1,6 @@
-<?php require_once('header.php'); ?>
+<?php require_once('header.php'); 
+
+if(getSession('logged-in')) { ?>
 
 <div class="container">
     <?php getSession('permaClose') ? $visibility = 'hidden' : $visibility = 'visible';  ?>
@@ -92,4 +94,7 @@
     </div>
 
 </div>
-<?php } require_once('footer.php'); ?>
+<?php } require_once('footer.php'); 
+} else {
+    header('Location: login.php');
+} ?>

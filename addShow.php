@@ -1,6 +1,6 @@
 <?php require_once('header.php'); ?>
 
-<?php 
+<?php if(getSession('logged-in')) {
 $genre = "SELECT * FROM category";
 $prepGenre = $dbConn->prepare($genre);
 $prepGenre->execute();
@@ -80,4 +80,7 @@ $prepStudio->execute();
     
 </div>
 
-<?php require_once('footer.php'); ?>
+<?php } else { 
+    header("Location: login.php");
+ }
+  require_once('footer.php'); ?>

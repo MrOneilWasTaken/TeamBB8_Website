@@ -6,11 +6,10 @@
         $input  = array();
         $errors = array();
 
-        $input['username'] = filter_has_var(INPUT_POST, 'username') ? $input['username'] : null;
+        $input['username'] = filter_has_var(INPUT_POST, 'username') ? $_POST['username'] : null;
         $input['username'] = trim($input['username']);
-        $input['username'] = filter_var($input['username'], FILTER_SANITIZE_SPECIAL_CHARS);
 
-        $input['password'] = filter_has_var(INPUT_POST, 'password') ? $input['password'] : null;
+        $input['password'] = filter_has_var(INPUT_POST, 'password') ? $_POST['password'] : null;
 
     try {
         unset($_SESSION['errors']);
@@ -26,7 +25,7 @@
         $user = $prepareCheck->fetchObject();
 
         if($user) {
-            $hash = $user->passwordHash;
+            $hash = $user->password_hash;
             if(password_verify($input['password'], $hash)) {
                 setSession('logged-in', 'true');
                 header('Location: admin.php'); ?>
@@ -37,11 +36,12 @@
                 <?php 
             } else
             {
-                $errors[] = "Username or Password is incorrect";
+                $errors[] = "Username or Password is incorrect (1st) ";
+                ;
             }
         }
         else {
-            $errors[] = "Username or Password is incorrect";
+            $errors[] = "Username or Password is incorrect (2nd)";
         }
 
     } catch (Exception $e) {
