@@ -2,6 +2,8 @@
 require_once('header.php');
 require_once('functions.php');
 
+if(getSession('logged-in')) {
+
 function processShow(array $input) {
 
     try
@@ -41,6 +43,10 @@ if($errors)
     echo processShow($input);
     echo "Update Successful<br>";
     echo "<a class='btn bg-dark text-white' href='add-show.php'>Add New Show<a>";
+}
+
+} else {
+    header('Location: login.php');
 }
 
 ?>

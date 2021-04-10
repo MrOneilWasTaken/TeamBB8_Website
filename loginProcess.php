@@ -36,12 +36,12 @@
                 <?php 
             } else
             {
-                $errors[] = "Username or Password is incorrect (1st) ";
+                $errors[] = "Username or Password is incorrect";
                 ;
             }
         }
         else {
-            $errors[] = "Username or Password is incorrect (2nd)";
+            $errors[] = "Username or Password is incorrect";
         }
 
     } catch (Exception $e) {

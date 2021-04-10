@@ -2,54 +2,58 @@
 require_once('header.php');
 require_once('functions.php');
 
-function updateShow(array $input) {
+if(getSession('logged-in')) {
 
-    try
-    {
-        $dbConn = getConnection();
+    function updateShow(array $input) {
 
-        $updateShow = "UPDATE shows SET
-        showName     = :showName, 
-        showDesc     = :showDesc, 
-        showEp       = :showEp, 
-        startDate    = :startDate, 
-        endDate      = :endDate, 
-        showCat      = :showCat, 
-        showStu      = :showStu, 
-        showImage    = :showImage, 
-        isAiring     = :isAiring
-        WHERE showID = :showID";
+        try
+        {
+            $dbConn = getConnection();
 
-        $prepareUpdate = $dbConn->prepare($updateShow);
+            $updateShow = "UPDATE shows SET
+            showName     = :showName, 
+            showDesc     = :showDesc, 
+            showEp       = :showEp, 
+            startDate    = :startDate, 
+            endDate      = :endDate, 
+            showCat      = :showCat, 
+            showStu      = :showStu, 
+            showImage    = :showImage, 
+            isAiring     = :isAiring
+            WHERE showID = :showID";
 
-        $prepareUpdate->execute(array(
-            ':showName'  => $input['showName'],
-            ':showDesc'  => $input['showDesc'],
-            ':showEp'    => $input['showEp'],
-            ':startDate' => $input['startDate'],
-            ':endDate'   => $input['endDate'],
-            ':showCat'   => $input['showCat'],
-            ':showStu'   => $input['showStu'],
-            ':showImage' => $input['showImage'],
-            ':isAiring'  => $input['isAiring'],
-            ':showID'    => $input['showID']
-        ));
+            $prepareUpdate = $dbConn->prepare($updateShow);
+
+            $prepareUpdate->execute(array(
+                ':showName'  => $input['showName'],
+                ':showDesc'  => $input['showDesc'],
+                ':showEp'    => $input['showEp'],
+                ':startDate' => $input['startDate'],
+                ':endDate'   => $input['endDate'],
+                ':showCat'   => $input['showCat'],
+                ':showStu'   => $input['showStu'],
+                ':showImage' => $input['showImage'],
+                ':isAiring'  => $input['isAiring'],
+                ':showID'    => $input['showID']
+            ));
+        }
+        catch(Exception $e)
+        {
+            echo "New show error: ".$e->getMessage();
+        }
     }
-    catch(Exception $e)
+
+    list($input, $errors) = validateShow();
+
+    if($errors)
     {
-        echo "New show error: ".$e->getMessage();
+        echo showErrors($errors);
+    } else {
+        echo updateShow($input);
+        echo "<br>Update Successful<br>";
+        echo "<a class='btn bg-dark text-white' href='chooseShow.php'>Add New Show<a>";
     }
-}
 
-list($input, $errors) = validateShow();
-
-if($errors)
-{
-    echo showErrors($errors);
-} else {
-    echo updateShow($input);
-    echo "<br>Update Successful<br>";
-    echo "<a class='btn bg-dark text-white' href='chooseShow.php'>Add New Show<a>";
 }
 
 ?>

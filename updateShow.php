@@ -1,7 +1,8 @@
 <?php require_once('header.php'); ?>
 
-<?php 
-$genre = "SELECT * FROM category";
+<?php if(getSession('logged-in')) { ?>
+
+<?php $genre = "SELECT * FROM category";
 $prepGenre = $dbConn->prepare($genre);
 $prepGenre->execute();
 
@@ -98,4 +99,5 @@ $prepareShow->execute(array(':showID' => $showID));
     
 </div>
 
+<?php } else { header('Location: login.php'); }
 <?php require_once('footer.php'); ?>
