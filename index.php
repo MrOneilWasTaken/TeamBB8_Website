@@ -39,11 +39,11 @@ while($showRow = $prepShow->fetchObject()) { ?>
             <div class="zoom-image">
             <img src="img/<?php $showRow->showImage; ?>" class="img-thumbnail" alt="<?php echo $showRow->showName; ?>"></a>
             </div>
-            <p><?php echo "Category: "$showRow->showCat; ?></p> <br />
+            <p><?php echo $showRow->showCat; ?></p> <br />
             <p><?php echo $showRow->showDesc; ?> <br />
-            <p><?php echo "No. of Episodes: " $showRow->showEp; ?></p> <br />
+            <p><?php echo $showRow->showEp; ?></p> <br />
             <p><?php echo $showRow->showStu; ?></p> <br />
-            <p><?php echo "Premiere Date: " $showRow->startDate; ?></p> <br />
+            <p><?php echo $showRow->startDate; ?></p> <br />
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Add to Watch List</button>
