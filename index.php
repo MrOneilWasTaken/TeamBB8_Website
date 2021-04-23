@@ -106,7 +106,7 @@ while($showRow = $showPrep->fetchObject()) { ?>
     <h2 id="pageTitle">Browse Shows</h2><br />
 
         <div class="row row-cols-3">
-            <div class="col-md-4"><img class="img-thumbnail" src="img/<?php $showRow->showImage; ?>" alt="<?php echo $showRow->showName; ?>"></a>
+            <div class="col-md-4"><img class="img-thumbnail" src="img/<?php echo $showRow->showImage; ?>" alt="<?php echo $showRow->showName; ?>"></a>
                 <div> <?php echo $showRow->showName; ?> <br />
                     <?php echo $showRow->showStu; ?> <br />
                     <button type="button" class="btn btn-dark" style="background-color: #8AAFD5;" data-toggle="modal" data-target="#showModal">
@@ -129,9 +129,9 @@ while($showRow = $showPrep->fetchObject()) { ?>
         </div>
         <div class="modal-body">
             <div class="zoom-image">
-            <img class="img-thumbnail" src="img/<?php $showRow->showImage; ?>" alt="<?php echo $showRow->showName; ?>">
+            <img class="img-thumbnail" src="img/<?php echo $showRow->showImage; ?>" alt="<?php echo $showRow->showName; ?>">
             </div>
-            <p><?php echo $showRow->showCat ?></p> <br />
+            <p><?php echo $showRow->showCat; ?></p> <br />
             <p><?php echo $showRow->showDesc; ?> <br />
             <p><?php echo $showRow->showEp; ?></p> <br />
             <p><?php echo $showRow->showStu; ?></p> <br />
