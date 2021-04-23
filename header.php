@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Localhost construction</title>
 </head>
-<body>
+<body style="justify-content: center">
     <?php 
         require_once('functions.php');
         $dbConn = getConnection(); 

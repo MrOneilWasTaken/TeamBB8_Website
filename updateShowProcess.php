@@ -54,6 +54,8 @@ if(getSession('logged-in')) {
         echo "<a class='btn bg-dark text-white' href='chooseShow.php'>Add New Show<a>";
     }
 
+} else {
+    header('Location: login.php');
 }
 
 ?>

@@ -2,19 +2,19 @@
 
 if(getSession('logged-in')) { ?>
 
-<div class="container">
+<div class="container text-center">
     <?php getSession('permaClose') ? $visibility = 'hidden' : $visibility = 'visible';  ?>
     <div class="row" style="visibility:<?php echo $visibility; ?>;">
         <div class="alert alert-success col-12 my-3" role="alert">
             <div class="row">
-                <div class="col-11">    
+                <div class="col-9 col-md-11">    
                     <h3>Login successful:</h3>
                     Welcome, Admin
                 </div>
-                <div class="col align-self-center">
-                    <button type="button" onclick="setSession('permaClose', 'true')" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                <div class="col-3 float-right col-md-1 align-self-center">
+                    <a type="button" onclick="" class="btn btn-outline-dark">
+                        logout
+                    </a>
                 </div>
             </div>
         </div>
@@ -35,7 +35,7 @@ if(getSession('logged-in')) { ?>
         </div>
     </div>
     <div class="row py-4 text-center">
-        <div class="col-12 col-md-4 border border-dark py-4 mx-4 rounded">            
+        <div class="col-12 col-md-4 border border-dark py-4 my-2 mx-4 rounded">            
             <a href="addShow.php">
                 <div class="row">
                     <div class="col-4 offset-4 align-self-center py-5">
@@ -50,7 +50,7 @@ if(getSession('logged-in')) { ?>
             </a>
         </div>
         <?php while($showRow = $prepShow->fetchObject()) { ?>
-        <div class="col-12 col-md-4 border border-dark py-4 mx-4 rounded">
+        <div class="col-12 col-md-4 border border-dark py-4 my-2 mx-4 rounded">
             <form action="deleteShow.php?showID=<?php echo $showRow->showID; ?>" method="post" onsubmit="return confirm('Are you sure you want to delete this show?');">
                 <div class="row">
                     <div class="col-6 offset-3">
@@ -85,7 +85,7 @@ if(getSession('logged-in')) { ?>
                         </a>
                     </div>
                     <div class="col-3 align-self-center">
-                    <input type="submit" class="deleteButton" value="">
+                    <input type="submit" class="deleteButton" value=''>
                     </div>
                 </div>
             </form>

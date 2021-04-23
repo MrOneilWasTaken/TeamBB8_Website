@@ -99,5 +99,5 @@ $prepareShow->execute(array(':showID' => $showID));
     
 </div>
 
-<?php } else { header('Location: login.php'); }
-<?php require_once('footer.php'); ?>
+<?php } else { header('Location: login.php'); } 
+require_once('footer.php'); ?>
