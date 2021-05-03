@@ -12,7 +12,7 @@ if(getSession('logged-in')) { ?>
                     Welcome, Admin
                 </div>
                 <div class="col-3 float-right col-md-1 align-self-center">
-                    <a type="button" onclick="" class="btn btn-outline-dark">
+                    <a type="button" href="logout.php" class="btn btn-outline-dark">
                         logout
                     </a>
                 </div>
