@@ -18,6 +18,9 @@ session_start();
     <?php
     require_once('functions.php');
     $dbConn = getConnection();
+
+    setSession('watchList', array());
+    
     ?>
 
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #8AAFD5">
