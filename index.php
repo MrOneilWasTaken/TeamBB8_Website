@@ -1,6 +1,35 @@
 <?php
 require_once('header.php');
 
+/* Display show that user has searched for if it matches a title from the database */
+if (isset($_POST["submit"])) {
+  $searchShow = $_POST["search"];
+  $findShow = $connection->prepare("SELECT * FROM `search` WHERE showName = '$searchShow'");
+
+  $findShow->setFetchMode(PDO:: FETCH_OBJ);
+  $findShow -> execute();
+
+  if ($rowShow = $findShow->fetch()) {
+    ?>
+    <div class="row row-cols-3">
+            <div class="col-md-4"><img class="img" src="img/<?php echo $rowShow->showImage; ?>" alt="<?php echo $showRow->showName; ?>"></a>
+                <div> <?php echo $rowShow->showName; ?> <br />
+                    <?php echo $rowShow->showStu; ?> <br />
+                    <button type="button" class="btn btn-dark" style="background-color: #8AAFD5;" data-toggle="modal" data-target="#showModal">
+                    More Info
+                    </button>
+                </div>
+            </div>
+        </div> <!--End row-->
+    </div> <!--End container-->
+<?php
+  }
+  else {
+      echo "Sorry, we're unable to find what you're looking for";
+  }
+}/* End of search bar code */
+
+
 $showList = "SELECT * FROM ((shows 
 INNER JOIN category ON shows.showCat=category.catID)
 INNER JOIN studio ON shows.showStu=studio.stuID)";
@@ -66,7 +95,7 @@ while ($showRow = $showPrep->fetchObject()) { ?>
     <div class="row row-cols-3">
       <div class="col-md-4"><img class="img-thumbnail" src="img/<?php echo $showRow->showImage; ?>" alt="<?php echo $showRow->showName; ?>"></a>
         <div> <?php echo $showRow->showName; ?> <br />
-          <?php echo $showRow->showStu; ?> <br />
+          <?php echo $showRow->stuName; ?> <br />
           <button type="button" class="btn btn-dark" style="background-color: #8AAFD5;" data-toggle="modal" data-target="#showModal">
             More Info
           </button>
@@ -92,7 +121,7 @@ while ($showRow = $showPrep->fetchObject()) { ?>
             <img class="img-thumbnail" src="img/<?php echo $showRow->showImage; ?>" alt="<?php echo $showRow->showName; ?>">
           </div>
           <div>
-            <p><?php echo $showRow->showCat; ?></p> <br />
+            <p><?php echo $showRow->catDesc; ?></p> <br />
             <p><?php echo $showRow->showDesc; ?> <br />
             <p><?php echo $showRow->showEp; ?></p> <br />
             <p><?php echo $showRow->stuName; ?></p> <br />
