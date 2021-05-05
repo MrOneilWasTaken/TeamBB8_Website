@@ -40,54 +40,6 @@ $showPrep->execute();
 
 while ($showRow = $showPrep->fetchObject()) { ?>
 
-  <style>
-    #pageTitle {
-      text-align: center;
-      padding: -5px;
-      margin-top: 0;
-    }
-
-    .navbar {
-      margin-bottom: 0;
-    }
-
-    .body {
-      background-color: #6F6FD6;
-    }
-
-    .container-fluid {
-      background-color: #6F6FD6;
-      padding: 20px;
-      flex-direction: row;
-    }
-
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    .zoom-image {
-      transition: transform .2s;
-      width: 250px;
-      height: 200px;
-      margin: 0 auto;
-    }
-
-    .zoom-image:hover {
-      -ms-transform: scale(1.5);
-      transform: scale(1.5);
-    }
-
-    .modal-body {
-      text-align: center;
-    }
-
-    #footer-content {
-      background-color: #8AAFD5;
-    }
-  </style>
-
-
   <div class="container-fluid" id="shows-section">
 
     <h2 id="pageTitle">Browse Shows</h2><br />
