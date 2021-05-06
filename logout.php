@@ -1,5 +1,5 @@
 <?php require_once('header.php'); 
 
-    session_destroy();
+    unset($_SESSION['logged-in']);
     header('Location: index.php');
  ?>

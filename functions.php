@@ -96,4 +96,5 @@ function getSession($k) {
         return $_SESSION[$k];
     }
 }
+
 ?>

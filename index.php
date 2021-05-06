@@ -36,11 +36,71 @@ INNER JOIN studio ON shows.showStu=studio.stuID)";
 
 $showPrep = $dbConn->prepare($showList);
 
-$showPrep->execute();
+$showPrep->execute(); ?>
 
-while ($showRow = $showPrep->fetchObject()) { ?>
+  <style>
+    #pageTitle {
+      text-align: center;
+      padding: -5px;
+      margin-top: 0;
+    }
+
+    .navbar {
+      margin-bottom: 0;
+    }
+
+    .body {
+      background-color: #6F6FD6;
+    }
+
+    .container-fluid {
+      background-color: #6F6FD6;
+      padding: 20px;
+      flex-direction: row;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .zoom-image {
+      transition: transform .2s;
+      width: 250px;
+      height: 200px;
+      margin: 0 auto;
+    }
+
+    .zoom-image:hover {
+      -ms-transform: scale(1.5);
+      transform: scale(1.5);
+    }
+
+    .modal-body {
+      text-align: center;
+    }
+
+    #footer-content {
+      background-color: #8AAFD5;
+    }
+  </style>
+
+<?php if(getSession('errors')) { ?>
+<div class="container-fluid pt-3">
+    <div class="row alert alert-danger">
+        <div class="col-12">
+            <h3>Error: </h3>
+            <?php echo getSession('errors'); ?>
+        </div>
+    </div>
+</div>
+<?php } ?>
+
+<?php while ($showRow = $showPrep->fetchObject()) { ?>
 
   <div class="container-fluid" id="shows-section">
+
+
 
     <h2 id="pageTitle">Browse Shows</h2><br />
 
@@ -81,18 +141,12 @@ while ($showRow = $showPrep->fetchObject()) { ?>
           </div>
         </div>
         <div class="modal-footer">
-          <a type="button" class="btn btn-primary" href="addWatchList.php">Add to WatchList</a>
+          <a type="button" class="btn btn-primary" href="addWatchList.php?showID=<?php echo $showRow->showID ?>">Add to WatchList</a>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
   </div>
-
-  <footer>
-    <div id="footer-content">
-      <p>&copy; MyShows 2021. All rights reserved.</p>
-    </div>
-  </footer>
 
 <?php }
 require_once('footer.php'); ?>
