@@ -5,7 +5,7 @@ function getConnection()
 	try {
 		$connection = new PDO("mysql:host=localhost;dbname=sepshowlist",
 			"root", "");
-		$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		$connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 		return $connection;
 	} catch (Exception $e) {
 		throw new Exception("Connection error ". $e->getMessage(), 0, $e);
