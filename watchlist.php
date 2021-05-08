@@ -24,7 +24,12 @@
     
                 echo $item;
             }
-        }?>
+        }
+        
+        if(isset($_POST['download'])) {
+            header('Location: '.$_SERVER['PHP_SELF']);
+        }
+        ?>
         <form method="post">
             <input type="submit" class="btn" name="reset" value="Reset">
         </form>
