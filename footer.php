@@ -1,8 +1,12 @@
-<footer>
-    <div id="footer-content" class="fixed-bottom">
+<?php if($_SERVER['REQUEST_URI'] == '/TeamBB8_Website/index.php' || $_SERVER['REQUEST_URI'] == '/TeamBB8_Website/watchlist.php' || $_SERVER['REQUEST_URI'] == '/TeamBB8_Website/donate.php' ) { ?>
+  <footer id="footer-content">
+    <div>
       <p>&copy; MyShows 2021. All rights reserved.</p>
     </div>
   </footer>
+<?php } ?>
+
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

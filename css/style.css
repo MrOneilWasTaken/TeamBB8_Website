@@ -7,10 +7,6 @@
     margin-top: 0;
 }
 
-body {
-    background-color: #6F6FD6;
-}
-
 #shows-section {
     background-color: #6F6FD6;
     padding: 20px;
@@ -40,6 +36,10 @@ body {
 
 #footer-content {
     background-color: #8AAFD5;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width:100%;
 }
 
 /* Donate page styling */
