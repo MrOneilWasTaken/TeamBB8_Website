@@ -58,7 +58,7 @@ session_start();
 
         <div class="container-fluid">
             <div class="row">
-                <div class="offset-10 col-2">
+                <div class="offset-md-10 col-md-2 col-12 pt-2 pb-1">
                     <form action="results.php" method="post">
                         <div class="input-group">
                             <input type="text" name="search" id="search" class="form-control form-control-lg rounded-0 border-info" placeholder="Search..." autocomplete="off" required>

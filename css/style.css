@@ -7,7 +7,7 @@
     margin-top: 0;
 }
 
-.body {
+body {
     background-color: #6F6FD6;
 }
 
@@ -42,6 +42,27 @@
     background-color: #8AAFD5;
 }
 
+/* Donate page styling */
+#donateHead {
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+    font-family: sans-serif;
+    padding-bottom: 20px;
+}
+
+.donateCode {
+    padding-top: 20px;
+}
+
+.donateText {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    font-family: sans-serif;
+}
+
+
 /* Donate page image slideshow */
 .mySlides {
     display: none;
@@ -53,13 +74,14 @@
 
 /* Slideshow container */
 .slideshow-container {
-    max-width: 1000px;
+    max-width: 500px;
     position: relative;
     margin: auto;
+    margin-bottom: 10px;
 }
 
 /* Image Captions */
-.caption {
+.textCaption {
     color: #f2f2f2;
     font-size: 15px;
     padding: 8px 12px;

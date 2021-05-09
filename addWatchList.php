@@ -17,4 +17,5 @@ if(!is_array($_SESSION['watchList'])) {
         $_SESSION['errors'] = 'Show is already added to Watch List';
     }
 header('Location: index.php');
+
 ?>

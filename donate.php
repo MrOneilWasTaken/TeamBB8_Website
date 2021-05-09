@@ -3,7 +3,7 @@
 <div class="container text-center">
     <div class="row">
         <div class="col-12">
-            <h1>Donate</h1>
+            <h1 id="donateHead">Donate</h1>
         </div>
     </div>
 
@@ -14,19 +14,19 @@
     <div class="mySlides fade">
         <div class="numbertext">1 / 3</div>
         <img class="slideImg" src="#" style="width:100%">
-        <div class="caption">Caption Text</div>
+        <div class="textCaption">Caption Text</div>
     </div>
 
     <div class="mySlides fade">
         <div class="numbertext">2 / 3</div>
         <img class="slideImg" src="#" style="width:100%">
-        <div class="caption">Caption Two</div>
+        <div class="textCaption">Caption Two</div>
     </div>
 
     <div class="mySlides fade">
         <div class="numbertext">3 / 3</div>
         <img class="slideImg" src="#" style="width:100%">
-        <div class="caption">Caption Three</div>
+        <div class="textCaption">Caption Three</div>
     </div>
 
     </div>
@@ -43,16 +43,16 @@
 
     <div class="row">
         <div class="col-12">
-            <img src="img/donateCode.png" alt="Donate!" title="Donate now!">
+            <img class="donateCode" src="img/donateCode.png" alt="Donate!" title="Donate now!">
         </div>
     </div>
     <div class="row">
         <div class="col-6 offset-3 py-4">
-            A small team of developers have worked hard on this project and are
+            <p class="donateText">A small team of developers have worked hard on this project and are
             continuing to update it over time. By donating to our PayPal, you will
             be providing a slice of good will to our team, and will allow us to keep
             funding our efforts to work on small projects such as this. Thanks for
-            donating! <br /> Love, Team BB-8
+            donating! <br /> Love, Team BB-8</p>
         </div>
     </div>
     <div class="row">
