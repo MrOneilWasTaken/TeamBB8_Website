@@ -70,9 +70,9 @@ $showPrep->execute(); ?>
     <h2 id="pageTitle">Browse Shows</h2><br />
 
     <div class="row row-cols-3">
-      <div class="col-md-4"><img class="img-thumbnail" src="img/<?php echo $showRow->showImage; ?>" alt="<?php echo $showRow->showName; ?>"></a>
-        <div> <?php echo $showRow->showName; ?> <br />
-          <?php echo $showRow->stuName; ?> <br />
+      <div class="col-md-4"><img class="img-thumbnail" src="img/<?= $showRow->showImage ?>" alt="<?= $showRow->showName ?>"></a>
+        <div> <?= $showRow->showName ?> <br />
+          <?= $showRow->stuName ?> <br />
           <button type="button" class="btn btn-dark" style="background-color: #8AAFD5;" data-toggle="modal" data-target="#showModal">
             More Info
           </button>
@@ -88,25 +88,25 @@ $showPrep->execute(); ?>
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="showModalLabel"><?php echo $showRow->showName; ?></h5>
+          <h5 class="modal-title" id="showModalLabel"><?= $showRow->showName ?></h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
           <div class="col-4 offset-4">
-            <img class="img-thumbnail" src="img/<?php echo $showRow->showImage; ?>" alt="<?php echo $showRow->showName; ?>">
+            <img class="img-thumbnail" src="img/<?= $showRow->showImage ?>" alt="<?= $showRow->showName ?>">
           </div>
           <div>
-            <p><?php echo $showRow->catDesc; ?></p> <br />
-            <p><?php echo $showRow->showDesc; ?> <br />
-            <p><?php echo $showRow->showEp; ?></p> <br />
-            <p><?php echo $showRow->stuName; ?></p> <br />
-            <p><?php echo $showRow->startDate; ?></p> <br />
+            <p><?= "Category:<br>".$showRow->catDesc."<br><br> 
+                    Synopsis:<br>".$showRow->showDesc."<br><br> 
+                    Number of Episodes:<br>".$showRow->showEp."<br><br>
+                    Studio:<br>".$showRow->stuName."<br><br>
+                    Start Date:<br>".$showRow->startDate ?></p>
           </div>
         </div>
         <div class="modal-footer">
-          <a type="button" class="btn btn-primary" href="addWatchList.php?showID=<?php echo $showRow->showID ?>">Add to WatchList</a>
+          <a type="button" class="btn btn-primary" href="addWatchList.php?showID=<?= $showRow->showID ?>">Add to WatchList</a>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>

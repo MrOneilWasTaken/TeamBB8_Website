@@ -51,36 +51,36 @@ if(getSession('logged-in')) { ?>
         </div>
         <?php while($showRow = $prepShow->fetchObject()) { ?>
         <div class="col-12 col-md-4 border border-dark py-4 my-2 mx-4 rounded">
-            <form action="deleteShow.php?showID=<?php echo $showRow->showID; ?>" method="post" onsubmit="return confirm('Are you sure you want to delete this show?');">
+            <form action="deleteShow.php?showID=<?= $showRow->showID ?>" method="post" onsubmit="return confirm('Are you sure you want to delete this show?');">
                 <div class="row">
                     <div class="col-6 offset-3">
-                        <img class="img-fluid" src="img/<?php echo $showRow->showImage; ?>" alt="<?php echo $showRow->showName; ?>">
+                        <img class="img-fluid" src="img/<?= $showRow->showImage ?>" alt="<?= $showRow->showName ?>">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-6 offset-3 text-center">
-                        <?php echo $showRow->showName; ?>
+                        <?= $showRow->showName ?>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-4 offset-4 text-center">
-                        <?php echo $showRow->catDesc; ?>
+                        <?= $showRow->catDesc ?>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-6 offset-3 text-center">
-                        <?php echo $showRow->stuName; ?>
+                        <?= $showRow->stuName ?>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12 text-center">
                         <?php $showRow->endDate == '0000-00-00' ? $value = "Present" : $value = $showRow->endDate; ?>
-                        <?php echo $showRow->startDate; ?> - <?php echo $value; ?>
+                        <?= $showRow->startDate ?> - <?= $value ?>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-3 offset-3 text-center">
-                        <a href="updateShow.php?showID=<?php echo $showRow->showID; ?>" data-toggle="tooltip" data-placement="top" title="Edit Show">
+                        <a href="updateShow.php?showID=<?= $showRow->showID ?>" data-toggle="tooltip" data-placement="top" title="Edit Show">
                             <img src="img/pencil.svg" class="full-width" alt="edit">
                         </a>
                     </div>
