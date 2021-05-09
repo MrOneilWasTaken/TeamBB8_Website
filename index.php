@@ -69,7 +69,7 @@ $showPrep->execute(); ?>
 
     <h2 id="pageTitle">Browse Shows</h2><br />
 
-    <div class="row row-cols-3">
+    <div class="row">
       <div class="col-md-4"><img class="img-thumbnail" src="img/<?= $showRow->showImage ?>" alt="<?= $showRow->showName ?>"></a>
         <div> <?= $showRow->showName ?> <br />
           <?= $showRow->stuName ?> <br />

@@ -20,7 +20,7 @@ session_start();
     $dbConn = getConnection();
     ?>
 
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #8AAFD5;position: relative">
+    <nav class="navbar navbar-expand-md navbar-light" style="background-color: #8AAFD5;position: relative">
         <a class="navbar-brand" href="#">Logo</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -58,7 +58,7 @@ session_start();
 
         <div class="container-fluid">
             <div class="row">
-                <div class="offset-md-10 col-md-2 col-12 pt-2 pb-1">
+                <div class="offset-xl-9 col-xl-3 col-12 pt-2 pb-1">
                     <form action="results.php" method="post">
                         <div class="input-group">
                             <input type="text" name="search" id="search" class="form-control form-control-lg rounded-0 border-info" placeholder="Search..." autocomplete="off" required>
