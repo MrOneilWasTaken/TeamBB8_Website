@@ -74,26 +74,3 @@ session_start();
             </div>
         </div>
     </nav>
-
-    <!-- <div class="container">
-    <div class="row mt-4">
-      <div class="col-md-8 mx-auto bg-light rounded p-4">
-        <h5 class="text-center font-weight-bold">AutoComplete Search Using Bootstrap 4, PHP, PDO - MySQL & Ajax</h5>
-        <hr class="my-1">
-        <h5 class="text-center text-secondary">Write any country name in the search box</h5>
-        <form action="results.php" method="post" class="p-3">
-          <div class="input-group">
-            <input type="text" name="search" id="search" class="form-control form-control-lg rounded-0 border-info" placeholder="Search..." autocomplete="off" required>
-            <div class="input-group-append">
-              <input type="submit" name="submit" value="Search" class="btn btn-info btn-lg rounded-0">
-            </div>
-          </div>
-        </form>
-      </div>
-      <div class="col-md-5" style="position: relative;margin-top: -38px;margin-left: 215px;">
-        <div class="list-group" id="show-list">
-           Here autocomplete list will be display
-        </div>
-      </div>
-    </div>
-  </div> -->
