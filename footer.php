@@ -1,4 +1,4 @@
-<?php if($_SERVER['REQUEST_URI'] == '/TeamBB8_Website/index.php' || $_SERVER['REQUEST_URI'] == '/TeamBB8_Website/watchlist.php' || $_SERVER['REQUEST_URI'] == '/TeamBB8_Website/donate.php' ) { ?>
+<?php if(in_array($_SERVER['REQUEST_URI'], $uri)) { ?>
   <footer id="footer-content">
     <div>
       <p>&copy; MyShows 2021. All rights reserved.</p>
