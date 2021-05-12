@@ -9,47 +9,6 @@ $showPrep = $dbConn->prepare($showList);
 
 $showPrep->execute(); ?>
 
-  <style>
-    #pageTitle {
-      text-align: center;
-      padding: -5px;
-      margin-top: 0;
-    }
-
-    .navbar {
-      margin-bottom: 0;
-    }
-
-    .body {
-      background-color: #6F6FD6;
-    }
-
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    .zoom-image {
-      transition: transform .2s;
-      width: 250px;
-      height: 200px;
-      margin: 0 auto;
-    }
-
-    .zoom-image:hover {
-      -ms-transform: scale(1.5);
-      transform: scale(1.5);
-    }
-
-    .modal-body {
-      text-align: center;
-    }
-
-    #footer-content {
-      background-color: #8AAFD5;
-    }
-  </style>
-
 <?php if(getSession('errors')) { ?>
 <div class="container-fluid pt-3">
     <div class="row alert alert-danger">
@@ -59,15 +18,13 @@ $showPrep->execute(); ?>
         </div>
     </div>
 </div>
-<?php } ?>
+<?php } 
 
-<?php while ($showRow = $showPrep->fetchObject()) { ?>
+while ($showRow = $showPrep->fetchObject()) { ?>
 
-  <div class="container-fluid" id="shows-section" style="background-color: #6F6FD6;padding: 20px;flex-direction: row;">
+  <div class="container-fluid" id="shows-section">
 
-
-
-    <h2 id="pageTitle">Browse Shows</h2><br />
+    <h2 class="text-white text-center">Browse Shows</h2><br />
 
     <div class="row text-center">
       <div class="col-md-4"><img class="img-thumbnail" src="img/<?= $showRow->showImage ?>" alt="<?= $showRow->showName ?>"></a>

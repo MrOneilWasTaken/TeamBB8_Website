@@ -63,80 +63,6 @@
 }
 
 
-/* Donate page image slideshow */
-.mySlides {
-    display: none;
-}
-
-.slideImg {
-    vertical-align: middle;
-}
-
-/* Slideshow container */
-.slideshow-container {
-    max-width: 500px;
-    position: relative;
-    margin: auto;
-    margin-bottom: 10px;
-}
-
-/* Image Captions */
-.textCaption {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-}
-
-/* Image numbers (1/3) */
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
-/* The dots/progress through image cycle */
-.dot {
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.dots {
-    text-align: center;
-}
-
-.activeSlide {
-    background-color: #717171;
-}
-
-/* Fading animation */
-.mySlides.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-}
-  
-@keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-}
-  
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
     .caption {
@@ -186,4 +112,16 @@ a[role=button] {
     border: none;
     width: 100px;
     height: 100px;
+}
+
+.btn-orange {
+    background: #ffa812;
+    border-color: #ffa812;
+    color: #fff;
+}
+
+.btn-orange:hover {
+    background: #db961f;
+    border-color: #db961f;
+    color: #fff;
 }
