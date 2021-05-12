@@ -78,14 +78,12 @@ if(getSession('logged-in')) { ?>
                         <?= $showRow->startDate ?> - <?= $value ?>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row pt-3">
                     <div class="col-3 offset-3 text-center">
-                        <a href="updateShow.php?showID=<?= $showRow->showID ?>" data-toggle="tooltip" data-placement="top" title="Edit Show">
-                            <img src="img/pencil.svg" class="full-width" alt="edit">
-                        </a>
+                        <a href="updateShow.php?showID=<?= $showRow->showID ?>" class="btn btn-orange">Edit</a>
                     </div>
                     <div class="col-3 align-self-center">
-                    <input type="submit" class="deleteButton" value=''>
+                        <input type="submit" class="btn btn-danger" value='Delete'>
                     </div>
                 </div>
             </form>
