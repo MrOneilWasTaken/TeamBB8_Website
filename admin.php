@@ -36,7 +36,7 @@ if(getSession('logged-in')) { ?>
     </div>
     <div class="row py-4 text-center">
         <div class="col-12 col-md-4 border border-dark py-4 my-2 mx-4 rounded">            
-            <a href="addShow.php">
+            <a href="addShow.php" id="add-show">
                 <div class="row">
                     <div class="col-4 offset-4 align-self-center py-5">
                         <img src="img/plus.svg" class="full-width" alt="">
