@@ -12,7 +12,7 @@
 
     if ($result) {
       foreach ($result as $row) {
-        echo '<a href="#" class="list-group-item list-group-item-action border-1">' . $row['showName'] . '</a>';
+        echo '<a href="#" id="show" class="list-group-item list-group-item-action border-1">' . $row['showName'] . '</a>';
       }
     } else {
       echo '<p class="list-group-item border-1">No Record</p>';

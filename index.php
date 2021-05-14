@@ -1,6 +1,36 @@
 <?php
 require_once('header.php');
 
+$order = '';
+
+if(isset($_POST['dropdownSubmit'])) {
+
+switch($_POST['dropdownSubmit']) {
+  case 'Alphabetical (asc)':
+    $order = "ORDER BY showName";
+    break;
+  case 'Alphabetical (desc)':
+    $order = "ORDER BY showName DESC";
+    break;
+  case 'Producer':
+    $order = "ORDER BY stuName";
+    break;
+  case 'Genre':
+    $order = "ORDER BY catDesc";
+    break;
+  case 'Year':
+    $order = "ORDER BY startDate";
+  case 'Ongoing':
+    $order = "WHERE endDate IS NULL";
+    break;
+  case 'default':
+    $order = '';
+}
+
+echo $order;
+
+}
+
 $showList = "SELECT * FROM ((shows 
 INNER JOIN category ON shows.showCat=category.catID)
 INNER JOIN studio ON shows.showStu=studio.stuID)";
@@ -22,7 +52,7 @@ $showPrep->execute(); ?>
 
 while ($showRow = $showPrep->fetchObject()) { ?>
 
-  <div class="container-fluid" id="shows-section">
+  <div class="container" id="shows-section">
 
     <h2 class="text-white text-center">Browse Shows</h2><br />
 
@@ -42,35 +72,5 @@ while ($showRow = $showPrep->fetchObject()) { ?>
   </div>
   <!--End container-->
 
-  <!-- Modal -->
-  <div class="modal fade" id="showModal" tabindex="-1" role="dialog" aria-labelledby="showModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="showModalLabel"><?= $showRow->showName ?></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="col-4 offset-4">
-            <img class="img-thumbnail" src="img/<?= $showRow->showImage ?>" alt="<?= $showRow->showName ?>">
-          </div>
-          <div>
-            <p><?= "Category:<br>".$showRow->catDesc."<br><br> 
-                    Synopsis:<br>".$showRow->showDesc."<br><br> 
-                    Number of Episodes:<br>".$showRow->showEp."<br><br>
-                    Studio:<br>".$showRow->stuName."<br><br>
-                    Start Date:<br>".$showRow->startDate ?></p>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <a type="button" class="btn btn-primary" href="addWatchList.php?showID=<?= $showRow->showID ?>">Add to WatchList</a>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
-<?php }
-require_once('footer.php'); ?>
+<?php require_once('modal.php'); } require_once('footer.php'); ?>

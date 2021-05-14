@@ -10,19 +10,25 @@
                     <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" area-expanded="false">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" area-expanded="false">
                         Shows
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #D7A878">
-                        <a class="dropdown-item">Alphabetical</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item">Producer</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item"> Genre</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item"> Ongoing</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item"> Year</a>
+                        <form method="post">
+                            <input type="submit" class="dropdown-item" name="dropdownSubmit" value="ID">
+                            <div class="dropdown-divider"></div>
+                            <input type="submit" class="dropdown-item" name="dropdownSubmit" value="Alphabetical (asc)">
+                            <div class="dropdown-divider"></div>
+                            <input type="submit" class="dropdown-item" name="dropdownSubmit" value="Alphabetical (desc)">
+                            <div class="dropdown-divider"></div>
+                            <input type="submit" class="dropdown-item" name="dropdownSubmit" value="Producer">
+                            <div class="dropdown-divider"></div>
+                            <input type="submit" class="dropdown-item" name="dropdownSubmit" value="Genre">
+                            <div class="dropdown-divider"></div>
+                            <input type="submit" class="dropdown-item" name="dropdownSubmit" value="Ongoing">
+                            <div class="dropdown-divider"></div>
+                            <input type="submit" class="dropdown-item" name="dropdownSubmit" value="Year">
+                        </form>
                     </div>
                 </li>
                 <li class="nav-item">
