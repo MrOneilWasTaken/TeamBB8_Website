@@ -56,9 +56,8 @@ $showPrep->execute(); ?>
 
     <?php while ($showRow = $showPrep->fetchObject()) { ?>
 
-
-
-      <div class="col-md-4"><img class="img-thumbnail" src="img/<?= $showRow->showImage ?>" alt="<?= $showRow->showName ?>"></a>
+      <div class="col-md-4">
+        <img class="img-thumbnail" src="img/<?= $showRow->showImage ?>" alt="<?= $showRow->showName ?>">
         <div class="py-3">
           <?= $showRow->showName ?>
         </div>
@@ -68,9 +67,9 @@ $showPrep->execute(); ?>
           </button>
         </div>
       </div>
-    <?php } ?>
-  </div>
-  <!--End row-->
+<?php } ?>
+</div>
+<!--End row-->
 </div>
 <!--End container-->
 
