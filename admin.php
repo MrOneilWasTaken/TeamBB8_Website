@@ -23,7 +23,7 @@ if(getSession('logged-in')) { ?>
 
         $show = "SELECT * FROM ((shows 
         INNER JOIN category ON shows.showCat=category.catID)
-        INNER JOIN studio ON shows.showStu=studio.stuID)";
+        INNER JOIN studio ON shows.showStu=studio.stuID) ORDER BY showID";
         
         $prepShow = $dbConn->prepare($show);
 
@@ -34,8 +34,8 @@ if(getSession('logged-in')) { ?>
             <h1>Please Choose a Show:</h1>
         </div>
     </div>
-    <div class="row py-4 text-center">
-        <div class="col-12 col-md-4 border border-dark py-4 my-2 mx-4 rounded">            
+    <div class="row text-center">
+        <div class="col-12 col-md-4 border border-dark rounded">            
             <a href="addShow.php" id="add-show">
                 <div class="row">
                     <div class="col-4 offset-4 align-self-center py-5">
@@ -50,8 +50,8 @@ if(getSession('logged-in')) { ?>
             </a>
         </div>
         <?php while($showRow = $prepShow->fetchObject()) { ?>
-        <div class="col-12 col-md-4 border border-dark py-4 my-2 mx-4 rounded">
-            <form action="deleteShow.php?showID=<?= $showRow->showID ?>" method="post" onsubmit="return confirm('Are you sure you want to delete this show?');">
+        <div class="col-12 col-md-4">
+            <form action="deleteShow.php?showID=<?= $showRow->showID ?>" method="post" class="border border-dark rounded py-4" onsubmit="return confirm('Are you sure you want to delete this show?');">
                 <div class="row">
                     <div class="col-6 offset-3">
                         <img class="img-fluid" src="img/<?= $showRow->showImage ?>" alt="<?= $showRow->showName ?>">
@@ -88,11 +88,11 @@ if(getSession('logged-in')) { ?>
                 </div>
             </form>
         </div>
-        
+        <?php } ?>
     </div>
 
 </div>
-<?php } require_once('footer.php'); 
+<?php require_once('footer.php'); 
 } else {
     header('Location: login.php');
 } ?>

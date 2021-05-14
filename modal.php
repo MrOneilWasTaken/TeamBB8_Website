@@ -1,30 +1,67 @@
-<!-- Modal -->
-<div class="modal fade" id="showModal" tabindex="-1" role="dialog" aria-labelledby="showModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="showModalLabel"><?= $showRow->showName ?></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="col-4 offset-4">
-            <img class="img-thumbnail" src="img/<?= $showRow->showImage ?>" alt="<?= $showRow->showName ?>">
-          </div>
-          <div>
-            <p><?= "Category:<br>".$showRow->catDesc."<br><br> 
-                    Synopsis:<br>".$showRow->showDesc."<br><br> 
-                    Number of Episodes:<br>".$showRow->showEp."<br><br>
-                    Studio:<br>".$showRow->stuName."<br><br>
-                    Start Date:<br>".$showRow->startDate ?></p>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <a type="button" class="btn btn-primary" href="addWatchList.php?showID=<?= $showRow->showID ?>">Add to WatchList</a>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  
+<div id="view-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+   <div class="modal-dialog"> 
+      <div class="modal-content"> 
+                  
+         <div class="modal-header"> 
+         
+         <h4 class="modal-title" id="showTitle">
+             </h4> 
+             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
+         </div> 
+         
+         <div class="modal-body"> 
+                       
+             <div id="modal-loader" style="display: none; text-align: center;">
+             </div>
+                       
+             <div id="dynamic-content"> <!-- mysql data will load in table -->
+                                        
+                 <div class="row"> 
+                     <div class="col-md-12"> 
+                        
+                     <div class="table-responsive">
+                             
+                     <table class="table table-striped table-bordered">
+                     <tr>
+                     <th>First Name</th>
+                     <td id="showDesc"></td>
+                     </tr>
+                                     
+                     <tr>
+                     <th>Last Name</th>
+                     <td id="txt_lname"></td>
+                     </tr>
+                                         
+                     <tr>
+                     <th>Email ID</th>
+                     <td id="txt_email"></td>
+                     </tr>
+                                         
+                     <tr>
+                     <th>Position</th>
+                     <td id="txt_position"></td>
+                     </tr>
+                                         
+                     <tr>
+                     <th>Office</th>
+                     <td id="txt_office"></td>
+                     </tr>
+                                         
+                     </table>
+                                
+                     </div>
+                                       
+                   </div> 
+              </div>
+                       
+             </div> 
+                             
+         </div> 
+           
+       <div class="modal-footer"> 
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>  
+       </div>  
+              
+      </div> 
+   </div>
+</div>
