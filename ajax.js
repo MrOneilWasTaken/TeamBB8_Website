@@ -47,12 +47,14 @@ $(document).ready(function () {
                 console.log(data);
                 $('#dynamic-content').hide(); // hide dynamic div
                 $('#dynamic-content').show(); // show dynamic div
-                $('#showTitle').html(data.showTitle);
+                $('#showName').html(data.showName);
                 $('#showDesc').html(data.showDesc);
-                // $('#txt_lname').html(data.last_name);
-                // $('#txt_email').html(data.email);
-                // $('#txt_position').html(data.position);
-                // $('#txt_office').html(data.office);
+                $('#showCat').html(data.catDesc);
+                $('#showEp').html(data.showEp);
+                $('#startDate').html(data.startDate);
+                $('#endDate').html(data.endDate);
+                $('#showStu').html(data.stuName);
+                $('#showImage').html('<img src="img/'+data.showImage+'" class="img-thumbnail" >');
                 $('#modal-loader').hide(); // hide ajax loader
             })
             .fail(function() {
