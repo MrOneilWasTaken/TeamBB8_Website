@@ -24,6 +24,8 @@ $(document).ready(function () {
     });
   });
 
+
+  
   $(document).ready(function() {
 
     $(document).on('click', '#getShow', function(e) {

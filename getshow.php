@@ -1,8 +1,8 @@
 <?php
    
    header('Content-type: application/json; charset=UTF-8');
-   
-
+   require_once('functions.php');
+    $dbConn = getConnection();
    if (isset($_POST['id']) && !empty($_POST['id'])) {
     
        $id = intval($_POST['id']);
