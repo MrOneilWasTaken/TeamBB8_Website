@@ -25,7 +25,6 @@ $(document).ready(function () {
   });
 
 
-  
   $(document).ready(function() {
 
     $(document).on('click', '#getShow', function(e) {
@@ -55,6 +54,9 @@ $(document).ready(function () {
                 $('#endDate').html(data.endDate);
                 $('#showStu').html(data.stuName);
                 $('#showImage').html('<img src="img/'+data.showImage+'" class="img-thumbnail" >');
+
+                $('#watchlistBtn').html(`<form method="GET" action="addWatchList.php?showID=${data.showID}"><input type="hidden" name="showID" value="${data.showID}" /> <input type="submit" class="btn btn-primary" value="Add to Watchlist">`); //watchlist button
+
                 $('#modal-loader').hide(); // hide ajax loader
             })
             .fail(function() {

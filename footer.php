@@ -1,10 +1,10 @@
-<?php if(in_array($_SERVER['REQUEST_URI'], $uri)) { ?>
+<!-- <?php //if(in_array($_SERVER['REQUEST_URI'], $uri)) { ?>
   <footer id="footer-content">
     <div>
       <p>&copy; MyShows 2021. All rights reserved.</p>
     </div>
   </footer>
-<?php } ?>
+<?php // } ?> -->
 
 
 
