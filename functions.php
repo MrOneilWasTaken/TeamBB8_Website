@@ -79,7 +79,7 @@ function validateShow() {
         $errors[] = 'Studio does not exist';
     }
 
-    if($input['startDate'] < $input['endDate']) {
+    if($input['startDate'] > $input['endDate']) {
         $errors[] = 'End date cannot be before Start date';
     }
 
