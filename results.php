@@ -32,7 +32,7 @@ if (isset($_POST['submit'])) {
         <td><?= $showRow->catDesc; ?></td>
         <td><?= $showRow->stuName; ?></td>
         <td>
-          <button type="button" class="btn btn-dark" style="background-color: #8AAFD5;" data-toggle="modal" data-target="#showModal">
+          <button type="button" class="btn btn-dark" style="background-color: #8AAFD5;" data-toggle="modal" data-target="#view-modal" data-id="<?php echo $showRow->showID; ?>" id="getShow" >
             More Info
           </button>
         </td>
