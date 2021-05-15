@@ -38,7 +38,7 @@
                     <a class="nav-link" href="donate.php">Donate</a>
                 </li>
                 <li class="nav-item">
-                    <a href="login.php" class="nav-link">Admin</a>
+                    <a href="admin.php" class="nav-link">Admin</a>
                 </li>
             </ul>
         </div>

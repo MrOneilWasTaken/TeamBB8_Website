@@ -90,7 +90,8 @@ $prepareShow->execute(array(':showID' => $showID));
                 <input name="isAiring" id="checkboxAiring" type="checkbox" <?php echo $checked; ?>>
             </div>
             <div class="col-12 text-center">
-                <input type="submit" value="Update Show">
+                <input type="submit" class="btn btn-primary" value="Update Show">
+                <a href="admin.php" class="btn btn-secondary">Return</a>
             </div>
         </div>
         <?php } ?>

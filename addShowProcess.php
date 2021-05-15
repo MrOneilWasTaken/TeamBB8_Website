@@ -41,12 +41,9 @@ if($errors)
     echo showErrors($errors);
 } else {
     echo processShow($input);
-    echo "Update Successful<br>";
-    echo "<a class='btn bg-dark text-white' href='add-show.php'>Add New Show<a>";
+    echo "Show Added Successful<br>
+    <a class='btn bg-primary text-white' href='addShow.php'>Add New Show<a><a class='btn bg-secondary text-white' href='admin.php'>Admin Home<a>";
 }
-
 } else {
     header('Location: login.php');
 }
-
-?>

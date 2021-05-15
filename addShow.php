@@ -30,11 +30,11 @@ $prepStudio->execute();
         <div class="row">
             <div class="col-12 col-md-6">
                 <label>Start Date:</label>
-                <input class="full-width" name="startDate" type="date" name="" id="" required>
+                <input class="full-width" name="startDate" type="date" required>
             </div>
             <div id="endDateCont" class="col-12 col-md-6">
                 <label>End Date:</label>
-                <input class="full-width" name="endDate" type="date" name="" id="endDate" required>
+                <input class="full-width" name="endDate" type="date" id="endDate" required>
             </div>
         </div>
 
@@ -72,7 +72,8 @@ $prepStudio->execute();
                 <input name="isAiring" id="checkboxAiring" type="checkbox">
             </div>
             <div class="col-12 text-center">
-                <input type="submit" value="Add Show">
+                <input type="submit" class="btn btn-primary" value="Add Show">
+                <a href="admin.php" class="btn btn-secondary">Return</a>
             </div>
         </div>
     </form>

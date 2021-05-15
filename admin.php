@@ -8,12 +8,17 @@ if (getSession('logged-in')) { ?>
         <div class="row m-0">
             <div class="alert alert-success col-12 my-3" role="alert">
                 <div class="row m-0">
-                    <div class="col-8 col-md-11">
+                    <div class="col-4 col-md-10">
                         <div class="h3-sm h5">Login successful:</div>
                         Welcome, Admin
                     </div>
+                    <div class="col-4 col-md-1 align-self-center">
+                        <a type="button" href="index.php" class="btn btn-outline-primary">
+                            Home
+                        </a>
+                    </div>
                     <div class="col-4 float-right col-md-1 align-self-center">
-                        <a type="button" href="logout.php" class="btn btn-outline-dark">
+                        <a type="button" href="logout.php" class="btn btn-outline-secondary">
                             logout
                         </a>
                     </div>
