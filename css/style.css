@@ -125,3 +125,19 @@ a[role=button] {
     border-color: #db961f;
     color: #fff;
 }
+
+/* display this row with flex and use wrap (= respect columns' widths) */
+
+.row-flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  
+  /* vertical spacing between columns */
+  
+  .content {
+    height: 100%;
+    padding: 20px 20px 10px;
+    color: #000;
+  }
