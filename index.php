@@ -56,7 +56,7 @@ $showPrep->execute(); ?>
 
     <?php while ($showRow = $showPrep->fetchObject()) { ?>
 
-      <div class="col-md-4">
+      <div class="col-md-4 pb-4">
         <img class="img-thumbnail" src="img/<?= $showRow->showImage ?>" alt="<?= $showRow->showName ?>">
         <div class="py-3">
           <?= $showRow->showName ?>
