@@ -51,7 +51,7 @@ if(getSession('logged-in')) { ?>
         </div>
         <?php while($showRow = $prepShow->fetchObject()) { ?>
         <div class="col-12 col-md-4">
-            <form action="deleteShow.php?showID=<?= $showRow->showID ?>" method="post" class="border border-dark rounded py-4" onsubmit="return confirm('Are you sure you want to delete this show?');">
+            <form action="deleteShow.php?showID=<?= $showRow->showID ?>" method="post" class="py-4" onsubmit="return confirm('Are you sure you want to delete this show?');">
                 <div class="row">
                     <div class="col-6 offset-3">
                         <img class="img-fluid" src="img/<?= $showRow->showImage ?>" alt="<?= $showRow->showName ?>">
