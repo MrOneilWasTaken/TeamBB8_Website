@@ -80,7 +80,9 @@ function validateShow() {
     }
 
     if($input['startDate'] > $input['endDate']) {
-        $errors[] = 'End date cannot be before Start date';
+        if(!empty($input['endDate'])) { 
+            $errors[] = 'End date cannot be before Start date';
+        }
     }
 
     return array ($input, $errors);
@@ -96,5 +98,3 @@ function getSession($k) {
         return $_SESSION[$k];
     }
 }
-
-?>

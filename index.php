@@ -20,6 +20,7 @@ if (isset($_POST['dropdownSubmit'])) {
       break;
     case 'Year':
       $order = "ORDER BY startDate";
+      break;
     case 'Ongoing':
       $order = "WHERE endDate IS NULL";
       break;
@@ -27,12 +28,11 @@ if (isset($_POST['dropdownSubmit'])) {
       $order = '';
   }
 
-  echo $order;
 }
 
 $showList = "SELECT * FROM ((shows 
 INNER JOIN category ON shows.showCat=category.catID)
-INNER JOIN studio ON shows.showStu=studio.stuID)";
+INNER JOIN studio ON shows.showStu=studio.stuID) $order";
 
 $showPrep = $dbConn->prepare($showList);
 

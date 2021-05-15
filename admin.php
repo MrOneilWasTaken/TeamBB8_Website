@@ -74,7 +74,7 @@ if(getSession('logged-in')) { ?>
                 </div>
                 <div class="row">
                     <div class="col-12 text-center">
-                        <?php $showRow->endDate == '0000-00-00' ? $value = "Present" : $value = $showRow->endDate; ?>
+                        <?php if($showRow->endDate == '0000-00-00' || $showRow->endDate == NULL ) { $value = "Present"; } else { $value = $showRow->endDate;} ?>
                         <?= $showRow->startDate ?> - <?= $value ?>
                     </div>
                 </div>
