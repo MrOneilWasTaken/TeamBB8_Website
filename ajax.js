@@ -1,31 +1,4 @@
 $(document).ready(function () {
-  // Send Search Text to the server
-  $("#search").keyup(function () {
-    let searchText = $(this).val();
-    if (searchText != "") {
-      $.ajax({
-        url: "search.php",
-        method: "post",
-        data: {
-          query: searchText,
-        },
-        success: function (response) {
-          $("#show-list").html(response);
-        },
-      });
-    } else {
-      $("#show-list").html("");
-    }
-  });
-  // Set searched text in input field on click of search button
-  $(document).on("click", "a#show", function () {
-    $("#search").val($(this).text());
-    $("#show-list").html("");
-  });
-});
-
-
-$(document).ready(function () {
 
   $(document).on('click', '#getShow', function (e) {
 
@@ -66,7 +39,7 @@ $(document).ready(function () {
         $('#modal-loader').hide(); // hide ajax loader
       })
       .fail(function () {
-        $('.modal-body').html('<i class="glyphicon glyphicon-info-sign"></i> Something went wrong, Please try again...');
+        $('.modal-body').html('Something went wrong, Please try again...');
       });
 
   });
