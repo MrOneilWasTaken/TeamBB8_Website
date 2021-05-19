@@ -211,3 +211,15 @@ a[role=button] {
         background-color: #e6e3e3 !important;
         color: #000;
     }
+
+    @media (min-width: 576px) { .table, .table-btn {
+        font-size: 16px !important;
+    } }
+
+    .table {
+        font-size: 12px;
+    }
+
+    .table-btn {
+        font-size: 9px;
+    }

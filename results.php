@@ -23,32 +23,39 @@ if (isset($_POST['submit'])) {
       </div>
     </div>
   <?php } ?>
-  <?php while ($showRow = $stmt->fetchObject()) { ?>
-    <table class="table mt-5">
-      <thead>
-        <tr>
-          <th scope="col-3">Title</th>
-          <th scope="col-3">Category</th>
-          <th scope="col-3">Studio</th>
-          <th scope="col-3">&nbsp;</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><?= $showRow->showName; ?></td>
-          <td><?= $showRow->catDesc; ?></td>
-          <td><?= $showRow->stuName; ?></td>
-          <td>
-            <button type="button" class="btn btn-dark" style="background-color: #8AAFD5;" data-toggle="modal" data-target="#view-modal" data-id="<?php echo $showRow->showID; ?>" id="getShow">
-              More Info
-            </button>
-          </td>
-        </tr>
-      <?php require_once('modal.php');
-    } ?>
+  <div class="row">
+    <div class="col-12">
+      <?php while ($showRow = $stmt->fetchObject()) { ?>
+        <div class="table-responsive  mt-5 ">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Category</th>
+                <th scope="col">Studio</th>
+                <th scope="col">&nbsp;</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><?= $showRow->showName; ?></td>
+                <td><?= $showRow->catDesc; ?></td>
+                <td><?= $showRow->stuName; ?></td>
+                <td>
+                  <button type="button" class="btn table-btn" style="background-color: #8AAFD5;" data-toggle="modal" data-target="#view-modal" data-id="<?php echo $showRow->showID; ?>" id="getShow">
+                    More Info
+                  </button>
+                </td>
+              </tr>
+            <?php require_once('modal.php');
+          } ?>
 
-      </tbody>
-    </table>
+            </tbody>
+          </table>
+        </div>
+    </div>
+  </div>
+
 </div>
 
 
