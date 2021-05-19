@@ -223,3 +223,11 @@ a[role=button] {
     .table-btn {
         font-size: 9px;
     }
+
+    .table, .table-btn, .title {
+        color: #fff;
+    }
+
+    #view-modal {
+        color: #000;
+    }

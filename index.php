@@ -58,7 +58,7 @@ $showPrep->execute(); ?>
 
       <div class="col-md-4 pb-4">
         <img class="img-thumbnail" src="img/<?= $showRow->showImage ?>" alt="<?= $showRow->showName ?>">
-        <div class="py-3">
+        <div class="py-3 title">
           <?= $showRow->showName ?>
         </div>
         <div>

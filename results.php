@@ -14,8 +14,12 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
-<div class="container">
-
+<div class="container" style="color: #fff;">
+  <div class="row">
+    <div class="col text-center pt-3">
+      <h1>Results</h1>
+    </div>
+  </div>
   <?php if ($stmt->rowCount() == 0) { ?>
     <div class="row mt-5">
       <div class="col">
@@ -26,7 +30,7 @@ if (isset($_POST['submit'])) {
   <div class="row">
     <div class="col-12">
       <?php while ($showRow = $stmt->fetchObject()) { ?>
-        <div class="table-responsive  mt-5 ">
+        <div class="table-responsive  mt-3">
           <table class="table">
             <thead>
               <tr>
