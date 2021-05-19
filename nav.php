@@ -9,7 +9,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
             </li>
-            <?php if ($_SERVER['REQUEST_URI'] != $uri[1]) { ?>
+            <?php if ($_SERVER['REQUEST_URI'] != $uri[1] &&  $_SERVER['REQUEST_URI'] != $uri[3]) { ?>
                 <li class="nav-item">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" area-expanded="false">
                         Shows
