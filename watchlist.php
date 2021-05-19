@@ -3,10 +3,10 @@
 <div class="container text-white pt-3">
     <div class="row">
         <div class="col-12 text-center">
-            <h1>Your watchlist:</h1>
+            <h1 id="watchlistTitle">Your Watchlist</h1>
         </div>
     </div>
-    <div class="row text-center">
+    <div id="watchlistContent" class="row text-center">
 
         <?php
 
