@@ -38,10 +38,10 @@ $uri = array(
 
     $showPrep->execute();
 
-    $showList = array();
+    $showArray = array();
 
     while ($showRow = $showPrep->fetchObject()) {
-        $showList[] = $showRow->showName;
+        $showArray[] = $showRow->showName;
     }
 
 

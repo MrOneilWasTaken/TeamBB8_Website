@@ -16,7 +16,7 @@
 
 <script src="js/search.js"></script>
 <script>    
-    autocomplete(input, <?= json_encode($showList) ?>);
+    autocomplete(input, <?= json_encode($showArray) ?>);
 </script>
 </body>
 </html>
