@@ -16,8 +16,6 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #D7A878">
                         <form method="post">
-                            <input type="submit" class="dropdown-item" name="dropdownSubmit" value="ID">
-                            <div class="dropdown-divider"></div>
                             <input type="submit" class="dropdown-item" name="dropdownSubmit" value="Alphabetical (asc)">
                             <div class="dropdown-divider"></div>
                             <input type="submit" class="dropdown-item" name="dropdownSubmit" value="Alphabetical (desc)">
@@ -29,6 +27,8 @@
                             <input type="submit" class="dropdown-item" name="dropdownSubmit" value="Ongoing">
                             <div class="dropdown-divider"></div>
                             <input type="submit" class="dropdown-item" name="dropdownSubmit" value="Year">
+                            <div class="dropdown-divider"></div>
+                            <input type="submit" class="dropdown-item" name="dropdownSubmit" value="Reset">
                         </form>
                     </div>
                 </li>
