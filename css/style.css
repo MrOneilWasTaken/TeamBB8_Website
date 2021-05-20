@@ -72,26 +72,6 @@
 
 /* Watchlist page styling */
 
-#watchlistTitle {
-    animation: glow 2s ease-in-out infinite alternate;
-    text-align: center;
-}
-@keyframes glow {
-    from {
-      text-shadow: 0 0 20px rgb(55, 245, 166);
-    }
-    to {
-      text-shadow: 0 0 30px #951ecc, 0 0 10px #9e1eda;
-    }
-  }
-
-#watchlistContent {
-    padding: 7px;
-    font-size: 25px;
-    border-style: dotted;
-    border-radius: 6px;
-}
-
 
 /* CMS Styling Author: Lewis Oxley-Jenkins */
 
