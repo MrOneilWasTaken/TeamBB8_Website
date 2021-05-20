@@ -1,4 +1,7 @@
-<?php 
+<?php /**
+ * functions
+ * Author: Lewis Oxley-Jenkins
+ */
 
 function getConnection() 
 {
@@ -12,6 +15,19 @@ function getConnection()
 	}
 }
 
+/**
+ * Shows Errors
+ * 
+ * Creates a variable, $output as an empty string, for each 
+ * error in the $errors array, concatinate that to the 
+ * $output string. 
+ * 
+ * @param array $errors an output of function validateShow() 
+ *                      if there are any validation errors.
+ *                      
+ * 
+ * @return $output
+ */
 function showErrors(array $errors) {
 
     $output = '';
@@ -23,6 +39,20 @@ function showErrors(array $errors) {
     return $output;
 }
 
+
+/**
+ * Checks the inputs of the data inputed in the forms 
+ * 
+ * 2 arrays are created, one called $input, the other $errors.
+ * The data which has been inputted into the form is then checked
+ * for empty fields. To prevent use of categories and studios that 
+ * don't exist a check is done to make sure the users haven't 
+ * attempted to use studios or categories that don't exist. A check
+ * is also done on the end date, to make sure it comes after the
+ * start date if it has been added.
+ * 
+ * @return array ($input, $errors)
+ */
 function validateShow() {
     $input = array();
     $errors = array();
@@ -88,11 +118,27 @@ function validateShow() {
     return array ($input, $errors);
 }
 
+/**
+ * sets session variable and its value
+ * 
+ * @param string $k the name of the session variable
+ * @param string $v sets the value of the session variable
+ * 
+ * @return true;
+ */
 function setSession($k, $v) {
     $_SESSION[$k] = $v;
     return true;
 }
 
+
+/**
+ * Checks to see if session variable exists
+ * 
+ * @param string $k is the name of the session varible
+ * 
+ * @return $_SESSION[$k]
+ */
 function getSession($k) {
     if(isset($_SESSION[$k])) {
         return $_SESSION[$k];
