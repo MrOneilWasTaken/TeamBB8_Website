@@ -11,10 +11,10 @@
     </div>
 <?php } ?>
 
-<div class="container">
+<div id="adminLogin" class="container">
     <div class="row">
         <div class="col-12 text-center">
-            <h1>Admin Login</h1>
+            <h1 id="adminTitle">Admin Login</h1>
         </div>
     </div>
     <div class="row">
@@ -22,12 +22,12 @@
             <form id="loginForm" action="loginProcess.php" method="post" class="border border-dark text-center my-5 mx-3 px-5">
                 <div class="row pt-5 px-md-5">
                     <div class="col-12">
-                        <label class="float-md-left">Username:</label> <input class="float-md-right full-width" type="text" name="username" id="">
+                        <label id="usernameLabel" class="float-md-left">Username:</label> <input class="float-md-right full-width" type="text" name="username" id="">
                     </div>
                 </div>
                 <div class="row px-md-5 pt-3 pb-5">
                     <div class="col-12">
-                        <label class="float-md-left">Password:</label> <input class="float-md-right full-width" type="password" name="password" id="">
+                        <label id="passwordLabel" class="float-md-left">Password:</label> <input class="float-md-right full-width" type="password" name="password" id="">
                     </div>
                 </div>
                 <div class="row pb-5">
