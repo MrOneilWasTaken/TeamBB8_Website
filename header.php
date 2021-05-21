@@ -5,7 +5,6 @@ $uri = array(
     '/TeamBB8_Website/index.php',
     '/TeamBB8_Website/watchlist.php',
     '/TeamBB8_Website/donate.php',
-    '/TeamBB8_Website/login.php',
     '/TeamBB8_Website/results.php'
 )
 ?>
