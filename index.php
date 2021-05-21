@@ -51,7 +51,7 @@ $showPrep->execute(); ?>
 
 <div class="container" id="shows-section">
 
-  <h2 class="text-white text-center">Browse Shows</h2><br />
+  <h1 class="text-white text-center">Browse Shows</h1><br />
   <div class="row text-center">
 
     <?php while ($showRow = $showPrep->fetchObject()) { ?>
