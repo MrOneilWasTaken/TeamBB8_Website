@@ -4,6 +4,13 @@ require_once('functions.php');
 
 if(getSession('logged-in')) {
 
+    /**
+     * Updates show records in the database
+     * 
+     * @param array $input
+     * 
+     * @return void
+     */
     function updateShow(array $input) {
 
         try

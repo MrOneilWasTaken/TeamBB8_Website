@@ -13,7 +13,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-6 offset-3 py-4">
+        <div class="col-sm-6 offset-sm-3 py-4">
             <p class="donateText">A small team of developers have worked hard on this project and are
             continuing to update it over time. By donating to our PayPal, you will
             be providing a slice of good will to our team, and will allow us to keep

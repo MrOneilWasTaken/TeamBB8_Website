@@ -46,7 +46,7 @@ $prepareShow->execute(array(':showID' => $showID));
                 <label>Start Date:</label>
                 <input class="full-width" name="startDate" type="date" id="" value="<?php echo "$singleShow->startDate"; ?>" required>
             </div>
-            <?php $singleShow->isAiring == 1 ? $visibility = 'hidden' : $visibility = 'visible'; ?>
+            <?php $singleShow->endDate == NULL ? $visibility = 'hidden' : $visibility = 'visible'; ?>
             <div id="endDateCont" class="col-12 col-md-6"  style="visibility:<?php echo $visibility ?>" >
                 <label>End Date:</label>
                 <input class="full-width" name="endDate" type="date" id="endDate" value="<?php echo "$singleShow->endDate"; ?>" required>
@@ -86,7 +86,7 @@ $prepareShow->execute(array(':showID' => $showID));
             </div>
             <div class="col-12 col-md-1">
                 <label>Airing?:</label><br/>
-                <?php $singleShow->isAiring == 1 ? $checked = 'checked' : $checked = ''; ?>
+                <?php $singleShow->endDate == NULL ? $checked = 'checked' : $checked = ''; ?>
                 <input name="isAiring" id="checkboxAiring" type="checkbox" <?php echo $checked; ?>>
             </div>
             <div class="col-12 text-center">
