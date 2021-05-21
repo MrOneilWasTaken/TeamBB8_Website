@@ -74,21 +74,9 @@
     font-family: 'Merriweather Sans', sans-serif;
 }
 
-/* Admin page styling */
-#adminLogin {
-    width: 100%;
-    height: 100%;
-    background-color:  #6F6FD6;
-}
-
 #adminTitle {
     padding-top: 10px;
-    color: white;
     font-family: 'Merriweather Sans', sans-serif;
-}
-
-#usernameLabel, #passwordLabel {
-    color: white;
 }
 
 /* CMS Styling Author: Lewis Oxley-Jenkins */
