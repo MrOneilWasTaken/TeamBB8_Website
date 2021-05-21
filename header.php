@@ -17,6 +17,10 @@ $uri = array(
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Google Font import -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap" rel="stylesheet">
+
     <title>Localhost construction</title>
 </head>
 <?php if (in_array($_SERVER['REQUEST_URI'], $uri)) {
