@@ -4,6 +4,13 @@ require_once('functions.php');
 
 if(getSession('logged-in')) {
 
+/**
+ * Inserts show into the database
+ * 
+ * @param array $input
+ * 
+ * @return void
+ */
 function processShow(array $input) {
 
     try
