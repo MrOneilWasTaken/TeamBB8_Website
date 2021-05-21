@@ -11,6 +11,7 @@
     background-color: #6F6FD6;
     padding: 20px;
     flex-direction: row;
+    font-family: 'Merriweather Sans', sans-serif;
 }
 
 .row {
@@ -47,7 +48,7 @@
     text-align: center;
     font-size: 40px;
     color: #fff;
-    font-family: sans-serif;
+    font-family: 'Merriweather Sans', sans-serif;
     padding-bottom: 20px;
 }
 
@@ -57,9 +58,9 @@
 
 .donateText {
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
     color: white;
-    font-family: sans-serif;
+    font-family: 'Merriweather Sans', sans-serif;
 }
 
 
@@ -71,7 +72,14 @@
 }
 
 /* Watchlist page styling */
+#watchlistTitle {
+    text-align: center;
+    font-family: 'Merriweather Sans', sans-serif;
+}
 
+#watchlistContent {
+    font-family: 'Merriweather Sans', sans-serif;
+}
 
 /* CMS Styling Author: Lewis Oxley-Jenkins */
 
