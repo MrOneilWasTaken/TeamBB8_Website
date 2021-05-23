@@ -1,6 +1,7 @@
 <?php
+
+require_once('header.php');
 if(getSession('logged-in')) {
-    require_once('header.php');
     try {
         $showID = $_GET['showID'];
 
