@@ -58,7 +58,7 @@ if(getSession('logged-in')) {
     } else {
         echo updateShow($input);
         echo "<br>Update Successful<br>";
-        echo "<a class='btn bg-primary text-white' href='addShow.php'>Add New Show<a><a class='btn bg-secondary text-white' href='admin.php'>Admin Home<a>";
+        echo "<a class='btn bg-primary text-white' href='admin.php'>Admin<a><a class='btn bg-secondary text-white' href='admin.php'>Admin Home<a>";
     }
 
 } else {

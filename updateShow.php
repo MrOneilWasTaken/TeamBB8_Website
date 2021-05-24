@@ -46,10 +46,10 @@ $prepareShow->execute(array(':showID' => $showID));
                 <label>Start Date:</label>
                 <input class="full-width" name="startDate" type="date" id="" value="<?php echo "$singleShow->startDate"; ?>" required>
             </div>
-            <?php $singleShow->endDate == NULL ? $visibility = 'hidden' : $visibility = 'visible'; ?>
+            <?php if($singleShow->endDate == NULL) { $visibility = 'hidden'; $re = ''; } else { $visibility = 'visible'; $re = 'required';} ?>
             <div id="endDateCont" class="col-12 col-md-6"  style="visibility:<?php echo $visibility ?>" >
                 <label>End Date:</label>
-                <input class="full-width" name="endDate" type="date" id="endDate" value="<?php echo "$singleShow->endDate"; ?>" required>
+                <input class="full-width" name="endDate" type="date" id="endDate" value="<?php echo "$singleShow->endDate"; ?>" <?php $re; ?>>
             </div>
         </div>
 
