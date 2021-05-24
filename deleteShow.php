@@ -8,7 +8,7 @@ if(getSession('logged-in')) {
         $deleteShow = "DELETE FROM shows WHERE showID = :showID";
         $prepDelete = $dbConn->prepare($deleteShow);
         $prepDelete->execute(array(':showID' => $showID));
-
+        header('Location: admin.php');
     } catch (\Throwable $th) {
         //throw $th;
     } {
